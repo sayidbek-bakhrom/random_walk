@@ -3,7 +3,8 @@ import random
 
 
 window = t.Screen()
-window.bgcolor("blue")
+window.bgcolor("gray")
+window.setup(300, 400)
 
 tim = t.Turtle()
 tim.pensize(10)
@@ -18,14 +19,14 @@ def random_color():
   color = (r, g, b)
   return color
 
-
-directions = [0, 90, 180, 270]
-
-
-for __ in range(20):
+ 
+for __ in range(100):
   tim.color(random_color())
-  tim.forward(35)
-  tim.setheading(random.choice(directions))
+  tim.circle(100)
+  tim.setheading(tim.heading() + 10)
+
+
+
 
 
 window.exitonclick
